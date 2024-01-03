@@ -1,10 +1,12 @@
 const express = require('express')
 const cookieParser = require('cookie-parser')
 const logger = require('morgan')
+const mongodb = require('./src/database/mongodb/connection')
 
 const indexRouter = require('./routes/index')
 const usersRouter = require('./routes/users')
 
+mongodb()
 const app = express()
 
 app.use(logger('dev'))
