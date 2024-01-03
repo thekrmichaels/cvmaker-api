@@ -11,10 +11,20 @@ services:
   server:
     build:
       context: .
+    depends_on:
+      - mongo
     environment:
+      MONGODB_URI: mongodb://mongo/test
       NODE_ENV: production
     ports:
       - 3000:3000
+    volumes:
+      - .:/usr/src/app
+  mongo:
+    image: mongo
+    restart: always
+    ports:
+      - 27017:27017
 
 # The commented out section below is an example of how to define a PostgreSQL
 # database that your application can use. `depends_on` tells Docker Compose to
