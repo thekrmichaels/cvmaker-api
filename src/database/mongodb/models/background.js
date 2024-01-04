@@ -18,6 +18,8 @@ const backgroundSchema = new Schema(
   { timestamps: true }
 )
 
+backgroundSchema.alias('_id', 'id')
+
 const Background = mongoose.model('Background', backgroundSchema)
 
 module.exports = Background

@@ -5,6 +5,8 @@ const Category = require('./models/category')
 const documentsToInsert = [
   { _id: '5ed62728363dde394e56354a', name: 'Contacts' },
   { _id: '5e8c82c020b7cf79d28e846a', name: 'Descriptions' },
+  { _id: '5f4a0d8e94d1ca3a1257b279', name: 'Educations' },
+  { _id: '60b2c0896546a8102401b23f', name: 'Experiences' },
   { _id: '65522d1678ac8070930f2c27', name: 'Titles' }
 ]
 
