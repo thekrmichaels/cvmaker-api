@@ -2,6 +2,7 @@
     "conventionalCommits.scopes": [
         "docker",
         "categories",
-        "backgrounds"
+        "backgrounds",
+        "resumes"
     ]
 }
