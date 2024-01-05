@@ -5,9 +5,7 @@ const mongodb = require('./src/database/mongodb/connection')
 
 const backgroundsRouter = require('./routes/backgrounds')
 const categoriesRouter = require('./routes/categories')
-const indexRouter = require('./routes/index')
 const resumesRouter = require('./routes/resumes')
-const usersRouter = require('./routes/users')
 
 mongodb()
 const app = express()
@@ -17,10 +15,8 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 app.use(cookieParser())
 
-app.use('/', indexRouter)
 app.use('/api', backgroundsRouter)
 app.use('/api', categoriesRouter)
 app.use('/api', resumesRouter)
-app.use('/users', usersRouter)
 
 module.exports = app
