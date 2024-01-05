@@ -6,6 +6,7 @@ require('./category')
 const resumeSchema = new Schema(
   {
     user_id: String,
+    name: String,
     titleName: { type: Schema.Types.ObjectId, ref: 'Category' },
     contacts: [{ type: Schema.Types.ObjectId, ref: 'Category' }],
     descriptionContent: { type: Schema.Types.ObjectId, ref: 'Category' },
