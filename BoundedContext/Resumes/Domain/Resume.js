@@ -3,6 +3,19 @@ const backgroundId = require('../../../BoundedContext/Shared/Backgrounds/Domain/
 const categoryId = require('../../Shared/Categories/Domain/ValueObjects/CategoryId')
 const userId = require('../../Shared/Users/Domain/ValueObjects/UserId')
 
+/**
+ * Resume.
+ *
+ * @class Resume
+ *
+ * @param {string} user_id - The user ID must be a string (Foreign Key)
+ * @param {string} name - The name must be a string and required
+ * @param {string} titleName - The professional title must be a string (Foreign Key)
+ * @param {string[]} contacts - Each contact ID must be a string (Foreign Key)
+ * @param {string} descriptionContent - The description content must be a string (Foreign Key)
+ * @param {string[]} experiences - Each experience ID must be a string (Foreign Key)
+ * @param {string[]} educations - Each education ID must be a string (Foreign Key)
+ */
 const Resume = Joi.object({
   id: Joi.string(),
   user_id: userId,
