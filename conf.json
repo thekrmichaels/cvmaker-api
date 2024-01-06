@@ -1,0 +1,26 @@
+{
+    "opts": {
+        "destination": "docs/"
+    },
+    "plugins": [],
+    "source": {
+        "include": [
+            "BoundedContext",
+            "routes"
+        ],
+        "includePattern": ".+\\.js$",
+        "excludePattern": "(^|\\/|\\\\)_"
+    },
+    "sourceType": "module",
+    "tags": {
+        "allowUnknownTags": false,
+        "dictionaries": [
+            "jsdoc",
+            "closure"
+        ]
+    },
+    "templates": {
+        "cleverLinks": true,
+        "monospaceLinks": true
+    }
+}
