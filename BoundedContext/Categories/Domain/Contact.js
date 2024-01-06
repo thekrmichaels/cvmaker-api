@@ -1,6 +1,17 @@
 const Joi = require('joi')
 const { Category } = require('../../Shared/Categories/Domain')
 
+/**
+ * Contact info.
+ *
+ * @class Contact
+ *
+ * @param {string} user_id - The user ID must be a string (Foreign Key) and required
+ * @param {string} name - The contact type must be a string and required
+ * @param {string} content - The contact must be a string and required
+ *
+ * @throws {errors[]} An array of validation errors.
+ */
 const Contact = Category.keys({
   name: Joi.string().required().messages({
     'any.required': 'The contact type is required',
